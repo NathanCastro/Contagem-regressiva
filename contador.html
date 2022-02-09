@@ -5,24 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
+
     <title>contador</title>
 </head>
 <body>
-    <form >
+    <form action="index.html" onsubmit="debug(event)">
         <div class="head">
             <div class="left">
                 <h5>Contador</h5>
             </div>
             <div class="right">
-                <button type="reset">
-                    Reiniciar
-                </button>
+                <a href="index.html"><!--botão não volta-->
+                    <button type="reset">
+                     Reiniciar
+                    </button>
+                </a>
             </div>
         </div>
     </form>
     <div class="main">
-        <div class="container">
-            
+        <div class="container">            
             <div id="countdown" class="countdown">
                 <div class="time">
                     <h2 id="days">00</h2>

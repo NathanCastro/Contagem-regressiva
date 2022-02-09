@@ -1,32 +1,25 @@
-function verificar(){    
-    let dataInput = document.getElementById('dataCompleta');
-    let resultInput = dataInput.value;
-    console.log('aqui tem que aparecer a data =>', resultInput);
+const daysRow = document.querySelector("#days");
+const hourRow = document.querySelector("#hours");
+const minutesRow = document.querySelector("#minutes");
+const secondsRow = document.querySelector("#seconds");
+
+
+const endYear = new Date().getFullYear() + 1;
+const newYearTime = new Date( `January 01 ${endYear} 00:00:00 `);
+
+const updateCountdown = () => {
+    const currentTime = new Date();
+    const difference = newYearTime - currentTime;
+    const days = Math.floor(difference / 1000 / 60 / 60 / 24);
+    const hours = Math.floor(difference / 1000 / 60 / 60 ) % 24;
+    const minutes = Math.floor(difference / 1000 / 60 ) % 60;
+    const seconds = Math.floor(difference / 1000) % 60;
     
-   
-
-    
-}
-/* 
-
-function contador(){
-
-    let dataInput = document.getElementById('date');
-    const second = 1000;
-    const minute = second * 60;
-    const hour = minute * 60;
-    const day = hour * 24;
-
-    let countDown = new Date('04/10/2022').getTime();
-    let x = setInterval(() => contador(), second);
-    
-    let now = new Date(Date.now()).getTime();
-    let diff = countDown - now;
-
-    document.getElementById('days').innerText = Math.floor(diff / day);
-    document.getElementById('hours').innerText = Math.floor(diff % day / hour);
-    document.getElementById('minutes').innerText = Math.floor(diff % hour / minute);
-    document.getElementById('seconds').innerText = Math.floor(diff % minute / second);
+    secondsRow.textContent= seconds < 10 ? '0' + seconds : seconds;
+    minutesRow.textContent= minutes < 10 ? '0' + minutes : minutes;
+    hourRow.textContent= hours < 10 ? '0' + hours : hours;
+    daysRow.textContent= days < 10 ? '0' + days : days;
 }
 
- */
+
+setInterval(updateCountdown,1000)

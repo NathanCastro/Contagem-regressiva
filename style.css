@@ -1,91 +1,97 @@
 html{
-    background-color: #000;
-    overflow-x: hidden;
-    overflow-y: hidden;
+  background-color: #000;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 .container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.contador{
-    
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .title{
-   color: #21EB00; 
+  color: #21EB00; 
 }
 
 h4{
-    color: #fff;
+  color: #fff;
 }
 
 .contagem{
-    background-color:#21EB00;
+  background-color:#21EB00;
 }
 
-
+.head{
+  display: flex;
+  justify-content: space-between;
+}
 
 .left{
-    float:left;
-    color: aqua;
+  color: #20EB00;
 }
 
 .right{
-   
+  padding-top: 14px;
+  
 }
+
+.right button{
+  width: 160px;
+  border-radius: 20px;
+  background: #20EB00;
+  height: 35px;
+}
+
 .year {
-    font-size: 200px;
-    z-index: -1;
-    opacity: 0.2;
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+  font-size: 200px;
+  z-index: -1;
+  opacity: 0.2;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
   
-  .countdown {
-    display: flex;
-    transform: scale(2);
-  }
+.countdown {
+  display: flex;
+  transform: scale(2);
+}
   
-  .time {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 15px;
-  }
+.time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+}
   
-  .time h2 {
-    margin: 0 0 5px;
-    color: #fff;
+.time h2 {
+  margin: 0 0 5px;
+  color: #fff;
+}
+
+small{
+  color: #fff;
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 45px;
   }
 
-  small{
-    color: #fff;
+  .time {
+    margin: 5px;
   }
-  
-  @media (max-width: 500px) {
-    h1 {
-      font-size: 45px;
-    }
-  
-    .time {
-      margin: 5px;
-    }
-  
-    .time h2 {
-      font-size: 12px;
-      margin: 0;
-    }
-  
-    .time small {
-      font-size: 10px;
-    }
+
+  .time h2 {
+    font-size: 12px;
+    margin: 0;
+  }
+
+  .time small {
+    font-size: 10px;
+  }
 }
