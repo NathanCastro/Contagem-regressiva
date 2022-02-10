@@ -15,7 +15,6 @@ html{
 .title{
   color: #21EB00; 
 }
-
 h4{
   color: #fff;
 }
@@ -43,6 +42,7 @@ h4{
   border-radius: 20px;
   background: #20EB00;
   height: 35px;
+  cursor:pointer;
 }
 
 .year {
