@@ -1,16 +1,3 @@
-const valorInput = document.getElementById('dateInput').value;
-function verificar(){
-   
-    if(valorInput){
-        alert("Coloca a data correta")
-    }else{
-        var dateStorage = JSON.stringify(new Date(valorInput).value);
-        sessionStorage.setItem("dateInput", dateStorage);
-        window.location = "contador.html"
-    }
-}
-
-
 const daysRow = document.querySelector("#days");
 const hourRow = document.querySelector("#hours");
 const minutesRow = document.querySelector("#minutes");
