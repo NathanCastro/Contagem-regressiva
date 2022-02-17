@@ -1,14 +1,14 @@
-
-const valorInput = document.getElementById('dateInput').value;
 function verificar(){
-    if(valorInput){
-        alert("Coloca a data correta")
-    }else{
-        var dateStorage = JSON.stringify(new Date(valorInput).value);
-        sessionStorage.setItem("dateInput", dateStorage);
+    const valorInput = document.getElementById('dateInput').value;
+    console.log('valor input', valorInput)
+    if(!valorInput){
+        alert("Colocar a data correta")
+    }else{        
+        localStorage.setItem("dateInput", valorInput);
         window.location = "contador.html"
     }
-    console.log('teste')
+   
 }
 
-verificar()
+
+
