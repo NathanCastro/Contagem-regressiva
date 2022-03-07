@@ -21,7 +21,7 @@ const updateCountdown = () => {
 
     
     
-    daysRow.textContent = days < 10 ? '0' + days : days;
+    daysRow.textContent = days < 10 ? days : days;
     hourRow.textContent = hours < 10 ? '0' + hours : hours;
     minutesRow.textContent = minutes < 10 ? '0' + minutes : minutes;
     secondsRow.textContent = seconds < 10 ? '0' + seconds : seconds;
